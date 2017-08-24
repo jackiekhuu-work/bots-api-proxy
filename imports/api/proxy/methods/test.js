@@ -1,5 +1,6 @@
 import {ValidatedMethod} from 'meteor/mdg:validated-method';
 import {LoggedInMixin} from 'meteor/tunifight:loggedin-mixin';
+import forward from '/imports/api/bots/methods/forward';
 
 const Methods = {};
 
@@ -15,10 +16,12 @@ Methods.testMethod = new ValidatedMethod({
   run({data}) {
     try {
       console.log('someone is calling us with data', data);
+      console.log('gonna forward calling');
+      forward({data});
+      return 'test success';
     } catch(err) {
       throw new Meteor.Error('api.test', err.message);
     }
-    return 'test success';
   }
 });
 
