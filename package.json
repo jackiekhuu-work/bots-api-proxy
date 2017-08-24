@@ -1,0 +1,13 @@
+{
+  "name": "bots-api-proxy",
+  "private": true,
+  "scripts": {
+    "start": "meteor run --settings settings.json --port 3005"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "bcrypt": "^1.0.3",
+    "meteor-node-stubs": "~0.2.4",
+    "validate.js": "^0.11.1"
+  }
+}
