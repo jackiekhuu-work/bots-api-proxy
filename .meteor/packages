@@ -21,3 +21,4 @@ accounts-password
 mdg:validated-method
 aldeed:simple-schema
 tunifight:loggedin-mixin
+nimble:restivus

@@ -5,7 +5,7 @@ export const forward = (api, {data}, callback) => {
   try {
     const {host, port} = Meteor.settings.bots;
     const BotsServer = DDP.connect(`http://${host}:${port}`);
-    console.log('forwarding alarm Data to Bots API');
+    console.log('forwarding alarm Data to Bots API', data);
     BotsServer.call(api, {data}, (err, res) => {
       callback(err, res);
     });

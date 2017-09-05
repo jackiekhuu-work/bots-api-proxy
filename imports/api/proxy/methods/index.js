@@ -14,6 +14,7 @@ Methods.testMethod = new ValidatedMethod({
   },
   validate: null,
   run({data}) {
+    console.log('data', data);
     try {
       if(data) {
         if(data.Records) {
